@@ -5,6 +5,13 @@ class PromptLoader:
     def __init__(self, model: GeminiAPI.Model) -> None:
 
         self.model = model
+    
+
+    def send_prompt(self, statement: str) -> str:
+        
+        response = self.model.send_prompt(statement)
+        return response.text
+
 
     def check_true(self, factors: list, statement:str) -> bool:
 
@@ -28,3 +35,4 @@ class PromptLoader:
         string_to_send = f"Summarize this statement and include these in the summary {features} : {statement}"
         response = self.model.send_prompt(string_to_send)
         return response.text
+    
