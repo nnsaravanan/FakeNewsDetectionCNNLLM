@@ -1,8 +1,8 @@
-from Gemini import GeminiAPI
+from gemini import geminiapi
 
 class PromptLoader:
 
-    def __init__(self, model: GeminiAPI.Model) -> None:
+    def __init__(self, model: geminiapi.Model) -> None:
 
         self.model = model
     
