@@ -2,3 +2,4 @@ keys
 data
 results
 models
+__pycache__/

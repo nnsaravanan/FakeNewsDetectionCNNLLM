@@ -29,7 +29,6 @@ class FakeNewsCNN:
         f = open('../data/glove.6B.100d.txt', encoding="utf8")
         for line in f:
             values = line.split()
-            #print(values[1:])
             word = values[0]
             coefs = np.asarray(values[1:], dtype='float32')
             self.embeddings_index[word] = coefs
